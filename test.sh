@@ -105,15 +105,15 @@ error_detect_depends() {
 
 # Cài đặt trước cài đặt
 pre_install_docker_compose() {
-  echo -e "  [1] doravpn.tk"
-  echo -e "  [2] doravpn.tk"
+  echo -e "  [1] doravpn.site"
+  echo -e "  [2] doravpn.site"
   read -p "  Web đang sử dụng:" api_host
   if [ "$api_host" == "1" ]; then
-    api_host="http://doravpn.tk/"
+    api_host="http://doravpn.site/"
   elif [ "$api_host" == "2" ]; then
-    api_host="http://doravpn.tk/"
+    api_host="http://doravpn.site/"
   else 
-    api_host="http://https://doravpn.tk/"
+    api_host="http://https://doravpn.site/"
   fi
 
   echo "--------------------------------"
@@ -181,7 +181,7 @@ Nodes:
   -
     PanelType: "V2board" # Panel type: SSpanel, V2board, PMpanel, Proxypanel
     ApiConfig:
-      ApiHost: "http://doravpn.tk/"
+      ApiHost: "http://doravpn.site/"
       ApiKey: "doradoradora123123123"
       NodeID: 41
       NodeType: V2ray # Node type: V2ray, Trojan, Shadowsocks, Shadowsocks-Plugin
