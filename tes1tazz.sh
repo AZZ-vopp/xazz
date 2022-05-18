@@ -105,8 +105,8 @@ error_detect_depends() {
 
 # Cài đặt trước cài đặt
 pre_install_docker_compose() {
-  echo -e "  [1] doravpn.site"
-  echo -e "  [2] doravpn.site"
+  echo -e "  [1] taivpn.com"
+  echo -e "  [2] taivpn.com"
   read -p "  Web đang sử dụng:" api_host
   if [ "$api_host" == "1" ]; then
     api_host="http://taivpn.com/"
