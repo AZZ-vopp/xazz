@@ -109,11 +109,11 @@ pre_install_docker_compose() {
   echo -e "  [2] doravpn.site"
   read -p "  Web đang sử dụng:" api_host
   if [ "$api_host" == "1" ]; then
-    api_host="http://doravpn.site/"
+    api_host="http://taivpn.com/"
   elif [ "$api_host" == "2" ]; then
-    api_host="http://doravpn.site/"
+    api_host="http://taivpn.com/"
   else 
-    api_host="http://https://doravpn.site/"
+    api_host="http://https://taivpn.com/"
   fi
 
   echo "--------------------------------"
@@ -181,8 +181,8 @@ Nodes:
   -
     PanelType: "V2board" # Panel type: SSpanel, V2board, PMpanel, Proxypanel
     ApiConfig:
-      ApiHost: "http://doravpn.site/"
-      ApiKey: "doradoradora123123123"
+      ApiHost: "http://taivpn.com/"
+      ApiKey: "taideptraitaideptrai"
       NodeID: 41
       NodeType: V2ray # Node type: V2ray, Trojan, Shadowsocks, Shadowsocks-Plugin
       Timeout: 30 # Timeout for the api request
@@ -193,6 +193,7 @@ Nodes:
       RuleListPath: # /etc/XrayR/rulelist Path to local rulelist file
     ControllerConfig:
       DisableSniffing: true
+      DisableSniffing: false
       ListenIP: 0.0.0.0 # IP address you want to listen
       SendIP: 0.0.0.0 # IP address you want to send pacakage
       UpdatePeriodic: 60 # Time to update the nodeinfo, how many sec.
