@@ -105,15 +105,15 @@ error_detect_depends() {
 
 # Cài đặt trước cài đặt
 pre_install_docker_compose() {
-  echo -e "  [1] taivpn.com"
-  echo -e "  [2] taivpn.com"
+  echo -e "  [1] outnet.ga"
+  echo -e "  [2] outnet.ga"
   read -p "  Web đang sử dụng:" api_host
   if [ "$api_host" == "1" ]; then
-    api_host="http://taivpn.com/"
+    api_host="http://outnet.ga/"
   elif [ "$api_host" == "2" ]; then
-    api_host="http://taivpn.com/"
+    api_host="http://outnet.ga/"
   else 
-    api_host="http://https://taivpn.com/"
+    api_host="http://https://outnet.ga/"
   fi
 
   echo "--------------------------------"
@@ -146,7 +146,7 @@ config_docker() {
 version: '3'
 services: 
   xrayr: 
-    image: vuvanthai2003opp/xazz:latest
+    image: misakano7545/xrayr:latest
     volumes:
       - ./config.yml:/etc/XrayR/config.yml # thư mục cấu hình bản đồ
       - ./dns.json:/etc/XrayR/dns.json 
@@ -181,8 +181,8 @@ Nodes:
   -
     PanelType: "V2board" # Panel type: SSpanel, V2board, PMpanel, Proxypanel
     ApiConfig:
-      ApiHost: "http://taivpn.com/"
-      ApiKey: "taideptraitaideptrai"
+      ApiHost: "http://outnet.ga/"
+      ApiKey: "1122334455667788"
       NodeID: 41
       NodeType: V2ray # Node type: V2ray, Trojan, Shadowsocks, Shadowsocks-Plugin
       Timeout: 30 # Timeout for the api request
@@ -193,7 +193,6 @@ Nodes:
       RuleListPath: # /etc/XrayR/rulelist Path to local rulelist file
     ControllerConfig:
       DisableSniffing: true
-      DisableSniffing: false
       ListenIP: 0.0.0.0 # IP address you want to listen
       SendIP: 0.0.0.0 # IP address you want to send pacakage
       UpdatePeriodic: 60 # Time to update the nodeinfo, how many sec.
